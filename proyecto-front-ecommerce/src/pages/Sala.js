@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import Gamelog from '../components/SalaConf/Gamelog';
+import ItemListContainer from '../components/SalaConf/SalaDeEspera/ItemFold/ItemListContainer';
+
 
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
         <div>
             <NavBar />
             <div>
-                <Gamelog />
+                <ItemListContainer/>
             </div>
         </div>
     );

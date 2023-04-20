@@ -34,7 +34,7 @@ const Register = () => {
 
     return (
         <>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0l2XCONKBWIAkcc6P2AmT2li1FyGNJBUMLQ&usqp=CAU' className='rounded mx-auto d-block sizeImg rounded-pill' alt=""></img>
+            <img src='https://raw.githubusercontent.com/HugoEspiG/E-commerce-solofront/main/Create%20a%20logo%20for%20a%20virtual%20bolirana%20game.%20The%20log.jpg' className='rounded mx-auto d-block sizeImg rounded-pill' alt=""></img>
             <form onSubmit={handleSubmit(customSubmit)} className='row '>
                 <div className="form-floating  col-md-4 div-m">
                     <input

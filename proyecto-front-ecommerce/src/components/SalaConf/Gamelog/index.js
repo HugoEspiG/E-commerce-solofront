@@ -1,15 +1,15 @@
+import React from 'react';
+import { envioDatos } from '../../../api/envioDatos';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
-import "./Login.css"
 import { useContext } from "react";
-import { UserContext } from "../../../context/UserContext";
-import React from "react";
 
-export default function Login() {
 
+
+const Gamelog = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const navigateFn = useNavigate();
-    const { addUser } = useContext(UserContext)
+
 
     const customSubmit = (data) => {
         // async function verify() {
@@ -19,10 +19,10 @@ export default function Login() {
         //         console.log(parseJson)
         //         if (parseJson) {
         //             addUser(parseJson)
-        //             navigateFn("/Home")
+        //             navigateFn(`/Game/${data.Nsala}`)
         //         }
         //         else {
-        //             alert("Usuario o email incorrectos")
+        //             alert("El numero de sala no existe")
         //         }
         //     } catch (error) {
         //         console.log(error);
@@ -37,33 +37,35 @@ export default function Login() {
             <form onSubmit={handleSubmit(customSubmit)}>
                 <div className="col-md-6 form-floating sizing">
                     <input
-                        type='email'
-                        {...register('email', { required: true })}
-                        placeholder="Usuario"
+                        type='text'
+                        {...register('nombre', { required: true })}
+                        placeholder="Nombre"
                         autoComplete="on"
                         className='form-control'
                     ></input>
-                    {errors.email && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Usuario</label>
+                    {errors.nombre && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                    <label htmlFor="floatingInputGrid">Numbre</label>
                 </div>
                 <div className="col-md-6 form-floating sizing">
                     <input
-                        type='password'
-                        {...register('password', { required: true })}
-                        placeholder="contraseña"
+                        type='text'
+                        {...register('Nsala', { required: true })}
+                        placeholder="Nsala"
                         autoComplete="off"
                         className='form-control'
                     ></input>
-                    {errors.password && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">contraseña</label>
+                    {errors.Nsala && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                    <label htmlFor="floatingInputGrid">Numero de sala</label>
                 </div>
                 <div align="col-12">
-                    <button className="btn btn-dark" type="submit">Loguearse</button>
+                    <button className="btn btn-dark" type="submit">Ingresar</button>
                 </div>
                 <p>
-                    No estas registrado? <NavLink to='/register'>Registrate</NavLink>
+                    Quieres crear una sala?  <NavLink to='/login'>Logueate</NavLink>
                 </p>
             </form>
         </>
-    )
-}
+    );
+};
+
+export default Gamelog;
