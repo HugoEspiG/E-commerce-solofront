@@ -1,5 +1,4 @@
 import Item from "../Item"
-import "./ItemList.css"
 
 export default function ItemList(props){
     return(

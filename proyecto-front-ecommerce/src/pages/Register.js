@@ -6,13 +6,13 @@ const Register = () => {
     return (
         <div>
             <header>
-                <NavBar/>
+                <NavBar />
             </header>
             <div className="container">
                 <Registro></Registro>
             </div>
-        </div>    
-        );
+        </div>
+    );
 };
 
 export default Register;

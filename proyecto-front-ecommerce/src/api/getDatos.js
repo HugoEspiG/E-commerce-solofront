@@ -6,7 +6,7 @@ export class getDatos {
             nombre: data.nombre,
             Nsala: data.Nsala
         }
-        return fetch(`http://localhost:8085/${user.Nsala}`,
+        return fetch(`http://localhost:8085/api/Hall/${user.Nsala}`,
         {
             method: 'GET',
             headers: {
@@ -18,7 +18,7 @@ export class getDatos {
     }
 
     static getUsers(Nsala){
-        return fetch(`http://localhost:8085/${Nsala}/players`,
+        return fetch(`http://localhost:8085/${Nsala}/all`,
         {
             method: 'GET',
             headers: {

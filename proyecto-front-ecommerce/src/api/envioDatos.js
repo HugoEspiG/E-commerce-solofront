@@ -24,7 +24,7 @@ export class envioDatos {
         }
 
         // console.log(user)
-        return fetch('http://localhost:8085/api/User/save',
+        return fetch('http://localhost:8085/api/Admin/save',
             {
                 method: 'POST',
                 headers: {
@@ -40,9 +40,9 @@ export class envioDatos {
             mail: data.email,
             password: data.password
         }
-        return fetch('http://localhost:8085/api/User/login',
+        return fetch('http://localhost:8085/api/Admin/login',
             {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
                 },

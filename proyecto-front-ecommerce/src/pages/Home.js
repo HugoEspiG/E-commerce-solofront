@@ -1,14 +1,18 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
-import Gamelog from '../components/SalaConf/Gamelog';
+import Preseleccion from '../components/Preseleccion';
+
 
 
 const Home = () => {
     return (
         <div>
-            <NavBar />
+            <header>
+                <NavBar/>
+            </header>
             <div>
-                <Gamelog />
+                <p>Bolicancha</p>
+                <Preseleccion/>
             </div>
         </div>
     );
