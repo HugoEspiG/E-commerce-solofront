@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Preseleccion from '../components/Preseleccion';
+import NavBar from '../components/organisms/NavBar';
+import Preseleccion from '../components/organisms/Preseleccion';
 
 
 

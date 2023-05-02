@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import ItemListContainer from '../components/SalaConf/SalaDeEspera/ItemFold/ItemListContainer';
+import NavBar from '../components/organisms/NavBar';
+import ItemListContainer from '../components/organisms/SalaConf/SalaDeEspera/ItemFold/ItemListContainer';
 
 
 

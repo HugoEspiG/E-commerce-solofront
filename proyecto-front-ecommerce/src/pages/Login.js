@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Login from '../components/Usuario/Login';
+import NavBar from '../components/organisms/NavBar';
+import Login from '../components/organisms/Usuario/Login';
 
 const login = () => {
     return (

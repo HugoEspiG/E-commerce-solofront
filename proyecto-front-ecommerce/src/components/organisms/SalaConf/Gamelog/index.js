@@ -1,5 +1,5 @@
 import React from 'react';
-import { envioDatos } from '../../../api/envioDatos';
+import { envioDatos } from '../../../../api/envioDatos';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { useContext } from "react";

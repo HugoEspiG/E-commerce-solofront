@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Registro from '../components/Usuario/Register';
+import NavBar from '../components/organisms/NavBar';
+import Registro from '../components/organisms/Usuario/Register';
 
 const Register = () => {
     return (

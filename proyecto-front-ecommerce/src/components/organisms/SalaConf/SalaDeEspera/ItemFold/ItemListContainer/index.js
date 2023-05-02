@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import React from 'react';
-import { getDatos } from "../../../../../api/getDatos";
+import { getDatos } from "../../../../../../api/getDatos";
 import ItemList from '../ItemList'
 
 

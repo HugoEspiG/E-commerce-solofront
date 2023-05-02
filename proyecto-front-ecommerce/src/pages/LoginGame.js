@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../components/NavBar';
-import Gamelog from '../components/SalaConf/Gamelog';
+import NavBar from '../components/organisms/NavBar';
+import Gamelog from '../components/organisms/SalaConf/Gamelog';
 
 
 const LoginGame = () => {

@@ -1,10 +1,13 @@
 
 
-@import "./scss/abstracts/variables";
-@import "./scss/abstracts/mixsin.scss";
+// Importar los estilos generales de la aplicación
+@import './styles/variables';
+@import './styles/base.scss';
+@import './styles/mixsin.scss';
+@import './styles/bootstrap';
+
+// Importar los estilos específicos de los componentes
+@import './components/atoms/button/button';
 
 
-@import "./scss/base/base.scss";
-@import "./scss/base/resets.scss";
 
-@import url("../node_modules/bootstrap/scss/bootstrap.scss");
