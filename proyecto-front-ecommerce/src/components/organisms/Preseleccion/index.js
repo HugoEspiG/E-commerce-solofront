@@ -15,9 +15,9 @@ const Preseleccion = () => {
     }
 
     return (
-            <div className="btn-custom">
-                <Button variant={"primary"} size={"lg"} className={""} onClick={IngCrerSala}>Crear Sala</Button>
-                <Button variant={"primary"} size={"lg"} className={""} onClick={IngSala}>Unirse Sala</Button>
+            <div className="custom">
+                <Button variant={"custom"} size={"lg"} className={""} onClick={IngCrerSala}>Crear Sala</Button>
+                <Button variant={"custom"} size={"lg"} className={""} onClick={IngSala}>Unirse Sala</Button>
             </div>
     );
 };

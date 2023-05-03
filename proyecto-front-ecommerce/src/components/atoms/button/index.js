@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import './_button.scss';
 
 const Button = ({ children, variant, size, className, ...rest }) => {
   const classes = classNames(
@@ -19,7 +20,7 @@ const Button = ({ children, variant, size, className, ...rest }) => {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark','custom']),
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   className: PropTypes.string,
 };

@@ -1,10 +1,12 @@
 // MyComponent.scss
 @import "../../../styles/variables";
+@import "../../../styles/bootstrap";
 
-// .btn-custom {
-//   // Agregar estilos personalizados para el botón
-//     @include button-size($padding-y: 50%, $padding-x: 50%, $font-size: 10rem,$border-radius: 1em);
-//     @include button-variant($background: #008080, $border: #82c9c9);
-//     width: 50%;
-//     height: 50%;
-// }
+.btn-custom {
+  // Agregar estilos personalizados para el botón
+    @include button-size($padding-y: 3%, $padding-x: 3%, $font-size: 2em,$border-radius: 1em);  
+    @include button-variant($background:#113f45,$border: #113f45);
+    margin: 2%;
+    width: 40%;
+    height: 50%;
+}
