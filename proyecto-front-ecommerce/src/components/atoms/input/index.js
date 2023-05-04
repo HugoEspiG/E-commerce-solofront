@@ -4,9 +4,10 @@ import classNames from 'classnames';
 import './_input.scss';
 
 const Input = React.forwardRef(({ children, label, type, placeholder, classNameDiv, classNameInput, ...props }, ref) => {
-    const classesDiv = classNames(classNameDiv);
-    const classesInput = classNames('form-control', classNameInput);
-    return (
+  const classesDiv = classNames(classNameDiv);
+  const classesInput = classNames('form-control', classNameInput)
+  return (
+    classNameInput == "" ?
       <div className={classesDiv}>
         <input
           type={type}
@@ -18,8 +19,20 @@ const Input = React.forwardRef(({ children, label, type, placeholder, classNameD
         {children}
         <label htmlFor="floatingInputGrid">{label}</label>
       </div>
-    );
-  });
+      :
+      <div className={classesDiv}>
+        <label htmlFor="floatingInputGrid">{label}</label>
+        <input
+          type={type}
+          placeholder={placeholder}
+          className={classesInput}
+          {...props}
+          ref={ref} // Agregamos el ref aquí
+        />
+        {children}
+      </div>
+  );
+});
 
-  export default Input;
-  
+export default Input;
+

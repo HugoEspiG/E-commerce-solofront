@@ -6,6 +6,15 @@ html,body{
     width: 100%; 
 }
 
+button{
+  box-shadow:  10px -10px 0px #058545, 0 6px 6px rgba(0, 0, 0, 0.2);;
+}
+
+button:hover{
+  transform: translateY(2px);
+  box-shadow: 5px -5px 0 #058545, 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -14,11 +23,11 @@ form {
     background-color: var(--color-primary);
     margin-top: 5%;
     padding: 20px;
-    border: 1px solid black;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
     border-radius: 1em;
+    box-shadow:  10px -10px 0px #058545, 0 6px 6px rgba(0, 0, 0, 0.2);;
   }
 
   form.flex-row {
@@ -29,9 +38,10 @@ form {
     background-color: var(--color-primary);
     margin-top: 5%;
     padding: 20px;
-    border: 1px solid black;
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 1em;
+    box-shadow:  10px -10px 0px #058545, 0 6px 6px rgba(0, 0, 0, 0.2);;
   }
+

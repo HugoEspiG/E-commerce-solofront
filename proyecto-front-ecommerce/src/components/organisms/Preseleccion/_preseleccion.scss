@@ -1,9 +1,7 @@
-// MyComponent.scss
-@import "../../../styles/variables";
 
 .custom {
-  display: flex;
-  align-items: start; 
+  display: flex-start;
+  align-items: flex-start; 
   justify-content: center;
   width: 100%;
   height: 70%;
