@@ -1,14 +1,16 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-
+import Input from '../../../atoms/input';
+import Button from '../../../atoms/button';
+import PItem from '../../../atoms/PItem';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const navigateFn = useNavigate();
 
     const customSubmit = (data) => {
-        if (data.email === data.email2) {
+        if (data.email === data.email2 && data.password==data.password2) {
             // async function datos() {
             //     try {
             //         const resp = await envioDatos.Register(data)
@@ -33,67 +35,75 @@ const Register = () => {
 
     return (
         <>
-            <img src='https://raw.githubusercontent.com/HugoEspiG/E-commerce-solofront/main/Create%20a%20logo%20for%20a%20virtual%20bolirana%20game.%20The%20log.jpg' className='rounded mx-auto d-block sizeImg rounded-pill' alt=""></img>
-            <form onSubmit={handleSubmit(customSubmit)} className='row '>
-                <div className="form-floating  col-md-4 div-m">
-                    <input
-                        type='text'
-                        {...register('nombre', { required: true })}
-                        placeholder="Nombre"
-                        className='form-control'
-                    ></input>
+            <form onSubmit={handleSubmit(customSubmit)} className='flex-row' id='form-reg'>
+                <Input
+                    placeholder={"Nombre"}
+                    type={'text'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('nombre', { required: true })}
+                    autoComplete="on"
+                    label={"nombre"}
+                >
                     {errors.nombre && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Nombre</label>
-                </div>
-                <div className="form-floating col-md-4 div-m">
-                    <input
-                        type='text'
-                        {...register('apellido', { required: true })}
-                        placeholder="Apellido"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
+                </Input>
+                <Input
+                    placeholder={"Apellido"}
+                    type={'text'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('apellido', { required: true })}
+                    autoComplete="on"
+                    label={"Apellido"}
+                >
                     {errors.apellido && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Apellido</label>
-                </div>
-                <div className="col-md-6 form-floating div-m">
-                    <input
-                        type='email'
-                        {...register('email', { required: true })}
-                        placeholder="@email.com"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
+                </Input>
+                <Input
+                    placeholder={"email"}
+                    type={'email'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('email', { required: true })}
+                    autoComplete="on"
+                    label={"email"}
+                >
                     {errors.email && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">@email.com</label>
-                </div>
-                <div className="col-md-6 form-floating div-m">
-                    <input
-                        type='email'
-                        {...register('email2', { required: true })}
-                        placeholder="confirmacion email"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
-                    {errors.email && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">confirmacion email</label>
-                </div>
-                <div className="col-md-6 form-floating div-m">
-                    <input
-                        type='password'
-                        {...register('password', { required: true })}
-                        placeholder="contraseña"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
-                    {errors.email && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">contraseña</label>
-                </div>
-                <div align="col-12 div-m">
-                    <button className="btn btn-dark" type="submit">Registrarse</button>
-                </div>
+                </Input>
+                <Input
+                    placeholder={"Confirmar email"}
+                    type={'email'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('email2', { required: true })}
+                    autoComplete="off"
+                    label={"conormación email"}
+                >
+                    {errors.email2 && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                </Input>
+                <Input
+                    placeholder={"Contraseña"}
+                    type={'password'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('password', { required: true })}
+                    autoComplete="on"
+                    label={"Contraseña"}
+                >
+                    {errors.password && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                </Input>
+                <Input
+                    placeholder={"Confirmar contraseña"}
+                    type={'password'}
+                    classNameDiv={"form-floating my-4 mx-4 col-md-4"}
+                    classNameInput={""}
+                    {...register('password2', { required: true })}
+                    autoComplete="off"
+                    label={"Confirmación contraseña"}
+                >
+                    {errors.password2 && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                </Input>
             </form>
-
+            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-reg">Registrarse</Button>
         </>
     );
 };

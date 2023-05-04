@@ -7,6 +7,6 @@
     @include button-size($padding-y: 3%, $padding-x: 3%, $font-size: 2em,$border-radius: 1em);  
     @include button-variant($background:#113f45,$border: #113f45);
     margin: 2%;
-    width: 40%;
-    height: 50%;
+    width: 20%;
+    height: 80%;
 }

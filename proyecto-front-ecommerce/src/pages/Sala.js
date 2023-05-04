@@ -1,16 +1,14 @@
 import React from 'react';
-import NavBar from '../components/organisms/NavBar';
 import ItemListContainer from '../components/organisms/SalaConf/SalaDeEspera/ItemFold/ItemListContainer';
-
+import "../components/organisms/Preseleccion/_preseleccion.scss"
+import PItem from '../components/atoms/PItem';
 
 
 const Home = () => {
     return (
         <div>
-            <header>
-                <NavBar />
-            </header>
             <div>
+                <PItem variant={"h1"} color={"light"} className={"pt-2 pb-5"}>Bolicancha</PItem>
                 <ItemListContainer />
             </div>
         </div>

@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form"
 import { useContext } from "react";
 import { UserContext } from "../../../../context/UserContext";
 import React from "react";
+import Input from "../../../atoms/input";
+import Button from "../../../atoms/button";
+import PItem from "../../../atoms/PItem";
 
 export default function Login() {
 
@@ -32,37 +35,34 @@ export default function Login() {
     }
     return (
         <>
-            <img src='https://raw.githubusercontent.com/HugoEspiG/E-commerce-solofront/main/Create%20a%20logo%20for%20a%20virtual%20bolirana%20game.%20The%20log.jpg' className='rounded mx-auto d-block sizeImg rounded-pill' alt=""></img>
-            <form onSubmit={handleSubmit(customSubmit)}>
-                <div className="col-md-6 form-floating sizing">
-                    <input
-                        type='email'
-                        {...register('email', { required: true })}
-                        placeholder="Usuario"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
+            <form onSubmit={handleSubmit(customSubmit)} id="form-log">
+                <Input
+                    placeholder={"Usuario"}
+                    type={'email'}
+                    classNameDiv={"form-floating my-4"}
+                    classNameInput={""}
+                    {...register('email', { required: true })}
+                    autoComplete="on"
+                    label={"email"}
+                >
                     {errors.email && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Usuario</label>
-                </div>
-                <div className="col-md-6 form-floating sizing">
-                    <input
-                        type='password'
-                        {...register('password', { required: true })}
-                        placeholder="contraseña"
-                        autoComplete="off"
-                        className='form-control'
-                    ></input>
+                </Input>
+                <Input
+                    placeholder={"Contraseña"}
+                    type={'password'}
+                    classNameDiv={"form-floating my-4"}
+                    classNameInput={""}
+                    {...register('password', { required: true })}
+                    autoComplete="off"
+                    label={"Contraseña"}
+                >
                     {errors.password && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">contraseña</label>
-                </div>
-                <div align="col-12">
-                    <button className="btn btn-dark" type="submit">Loguearse</button>
-                </div>
-                <p>
-                    No estas registrado? <NavLink to='/register'>Registrate</NavLink>
-                </p>
+                </Input>
             </form>
+            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-log">Empezar</Button>
+            <PItem variant={"fs-5"} color={"light"} className={"my-2 "}>
+                No estas logueado?  <NavLink to='/register'>Registrate</NavLink>
+            </PItem>
         </>
     )
 }

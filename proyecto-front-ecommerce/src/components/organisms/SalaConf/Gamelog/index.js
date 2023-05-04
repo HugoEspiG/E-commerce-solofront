@@ -3,7 +3,9 @@ import { envioDatos } from '../../../../api/envioDatos';
 import { NavLink, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { useContext } from "react";
-
+import Input from '../../../atoms/input';
+import Button from '../../../atoms/button';
+import PItem from '../../../atoms/PItem';
 
 const Gamelog = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -32,37 +34,34 @@ const Gamelog = () => {
     }
     return (
         <>
-            <img src='https://raw.githubusercontent.com/HugoEspiG/E-commerce-solofront/main/Create%20a%20logo%20for%20a%20virtual%20bolirana%20game.%20The%20log.jpg' className='rounded mx-auto d-block sizeImg rounded-pill' alt=""></img>
-            <form onSubmit={handleSubmit(customSubmit)}>
-                <div className="col-md-2 form-floating sizing">
-                    <input
-                        type='text'
-                        {...register('nombre', { required: true })}
-                        placeholder="Nombre"
-                        autoComplete="on"
-                        className='form-control'
-                    ></input>
-                    {errors.nombre && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Numbre</label>
-                </div>
-                <div className="col-md-2 form-floating sizing">
-                    <input
-                        type='text'
-                        {...register('Nsala', { required: true })}
-                        placeholder="Nsala"
-                        autoComplete="off"
-                        className='form-control'
-                    ></input>
+            <form onSubmit={handleSubmit(customSubmit)} id='form-gamelog'>
+                <Input
+                    placeholder={"Codigo"}
+                    type={'text'}
+                    classNameDiv={"form-floating my-4"}
+                    classNameInput={""}
+                    {...register('Nsala', { required: true })}
+                    autoComplete="off"
+                    label={"Codigo"}
+                >
                     {errors.Nsala && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
-                    <label htmlFor="floatingInputGrid">Numero de sala</label>
-                </div>
-                <div className='col-md-12'>
-                    <button className="div-m btn btn-light" type="submit">Ingresar</button>
-                </div>
-                <p className='div-m'>
-                    Quieres crear una sala?  <NavLink to='/login'>Logueate</NavLink>
-                </p>
+                </Input>
+                <Input
+                    placeholder={"Nombre"}
+                    type={'text'}
+                    classNameDiv={"form-floating my-4"}
+                    classNameInput={""}
+                    {...register('nombre', { required: true })}
+                    autoComplete="on"
+                    label={"Nombre"}
+                >
+                    {errors.nombre && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
+                </Input>
             </form>
+            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-gamelog">Empezar</Button>
+            <PItem variant={"fs-5"} color={"light"} className={"my-2 "}>
+                Quieres crear una sala?  <NavLink to='/login'>Logueate</NavLink>
+            </PItem>
         </>
     );
 };

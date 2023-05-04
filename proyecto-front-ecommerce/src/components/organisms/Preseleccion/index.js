@@ -1,24 +1,30 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import "./Preseleccion.scss"
+import "./_preseleccion.scss"
 import Button from '../../atoms/button';
 
 const Preseleccion = () => {
     const navigateFn = useNavigate();
 
     const IngSala = () => {
-        navigateFn('/Login')
-    }
-
-    const IngCrerSala = () => {
         navigateFn('/LogSala')
     }
 
+    const IngCrerSala = () => {
+        navigateFn('/Login')
+    }
+
     return (
-            <div className="custom">
-                <Button variant={"custom"} size={"lg"} className={""} onClick={IngCrerSala}>Crear Sala</Button>
-                <Button variant={"custom"} size={"lg"} className={""} onClick={IngSala}>Unirse Sala</Button>
-            </div>
+        <div className="custom">
+            <Button variant={"custom"} size={"lg"} className={""} onClick={IngCrerSala}>
+                <span className="create">Crear</span>
+                <span className="room"> sala</span>
+            </Button>
+            <Button variant={"custom"} size={"lg"} className={""} onClick={IngSala}>
+                <span className="create">Unirse</span>
+                <span className="room"> sala</span>
+            </Button>
+        </div>
     );
 };
 

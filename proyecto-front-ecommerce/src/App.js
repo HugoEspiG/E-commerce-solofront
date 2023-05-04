@@ -8,7 +8,7 @@ import LoginGame from './pages/LoginGame';
 
 function App() {
   return (
-    <div className="App bg-image">
+    <div className="App">
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/register' element={<Register/>} />

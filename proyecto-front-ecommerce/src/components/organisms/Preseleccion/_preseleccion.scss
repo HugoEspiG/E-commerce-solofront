@@ -1,0 +1,23 @@
+// MyComponent.scss
+@import "../../../styles/variables";
+
+.custom {
+  display: flex;
+  align-items: start; 
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  margin-top: 5%;
+  margin-left: 0;
+}
+.create {
+  font-size: 0.8em;
+}
+
+.room {
+  font-size: 1.5em;
+}
+
+.prueba{
+  height: 70vh;
+}
