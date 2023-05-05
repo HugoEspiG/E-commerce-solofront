@@ -8,7 +8,10 @@
 
 // Importar los estilos específicos de los componentes
 @import './components/atoms/button/button';
-@import './components/organisms/Preseleccion/Preseleccion.scss';
-
+@import './components/organisms/Preseleccion/_preseleccion.scss';
+@import './components/atoms/input/input';
+@import './components/atoms/PItem/pItem';
+@import './components/organisms/Usuario/User/User'
+ 
 
 

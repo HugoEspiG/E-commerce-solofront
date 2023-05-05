@@ -1,0 +1,7 @@
+@mixin image-style($width, $height, $shadow-size, $shadow-color) {
+    width: $width;
+    height: $height;
+    box-shadow: $shadow-size $shadow-size 0 $shadow-color;
+  }
+  
+  

@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemListContainer from '../components/organisms/SalaConf/SalaDeEspera/ItemFold/ItemListContainer';
+import ItemListContainer from '../components/organisms/Usuario/User/ItemFold/ItemListContainer';
 import "../components/organisms/Preseleccion/_preseleccion.scss"
 import PItem from '../components/atoms/PItem';
 
