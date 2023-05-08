@@ -5,7 +5,7 @@
 .btn-custom {
   // Agregar estilos personalizados para el botón
     @include button-size($padding-y: 3%, $padding-x: 3%, $font-size: 2em,$border-radius: 1em);  
-    @include button-variant($background:#113f45,$border: #113f45);
+    @include button-variant($background:#012E40,$border: #012E40 );
     margin: 2%;
     width: 20%;
     height: 80%;

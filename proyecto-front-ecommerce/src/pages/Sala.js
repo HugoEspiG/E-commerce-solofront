@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemListContainer from '../components/organisms/Usuario/User/ItemFold/ItemListContainer';
+import ItemList from '../components/organisms/Usuario/User/ItemFold/ItemList';
 import "../components/organisms/Preseleccion/_preseleccion.scss"
 import PItem from '../components/atoms/PItem';
 
@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <div>
                 <PItem variant={"h1"} color={"light"} className={"pt-2 pb-5"}>Bolicancha</PItem>
-                <ItemListContainer />
+                <ItemList/>
             </div>
         </div>
     );
