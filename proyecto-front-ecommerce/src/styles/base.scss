@@ -6,14 +6,6 @@ html,body{
     width: 100%; 
 }
 
-button{
-  box-shadow:  10px -10px 0px var(--color-secundary), 0 6px 6px rgba(0, 0, 0, 0.2);;
-}
-
-button:hover{
-  transform: translateY(2px);
-  box-shadow: 5px -5px 0 var(--color-secundary), 0 4px 4px rgba(0, 0, 0, 0.2);
-}
 
 form {
     display: flex;
@@ -27,7 +19,7 @@ form {
     margin-left: auto;
     margin-right: auto;
     border-radius: 1em;
-    box-shadow:  10px -10px 0px var(--color-secundary), 0 6px 6px rgba(0, 0, 0, 0.2);;
+    box-shadow:  10px -10px 0px var(--color-secondary), 0 6px 6px rgba(0, 0, 0, 0.2);;
   }
 
   form.flex-row {
@@ -42,6 +34,6 @@ form {
     margin-left: auto;
     margin-right: auto;
     border-radius: 1em;
-    box-shadow:  10px -10px 0px var(--color-secundary), 0 6px 6px rgba(0, 0, 0, 0.2);;
+    box-shadow:  10px -10px 0px var(--color-secondary), 0 6px 6px rgba(0, 0, 0, 0.2);;
   }
 

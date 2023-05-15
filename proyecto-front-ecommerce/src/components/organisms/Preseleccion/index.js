@@ -16,11 +16,11 @@ const Preseleccion = () => {
 
     return (
         <div className="custom">
-            <Button variant={"custom"} size={"lg"} className={""} onClick={IngCrerSala}>
+            <Button variant={"custom"} size={"lg"} className={"add-shadow"} onClick={IngCrerSala}>
                 <span className="create">Crear</span>
                 <span className="room"> sala</span>
             </Button>
-            <Button variant={"custom"} size={"lg"} className={""} onClick={IngSala}>
+            <Button variant={"custom"} size={"lg"} className={"add-shadow"} onClick={IngSala}>
                 <span className="create">Unirse</span>
                 <span className="room"> sala</span>
             </Button>

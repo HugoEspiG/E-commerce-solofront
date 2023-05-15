@@ -1,5 +1,5 @@
 .img-tam-user{
-    @include image-style(300px, 300px, 5px, black);
+    @include image-style(100%, auto, 5px, black);
 }
 
 .prueba2{

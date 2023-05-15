@@ -8,7 +8,6 @@ const PItem = ({ children, variant, color, className, ...rest }) => {
     `text-${color}`,
     className
   );
-  console.log(classes)
   return (
     <p className={classes} {...rest}>
       {children}    

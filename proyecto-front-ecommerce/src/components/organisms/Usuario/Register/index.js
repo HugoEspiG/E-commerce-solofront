@@ -103,7 +103,7 @@ const Register = () => {
                     {errors.password2 && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
                 </Input>
             </form>
-            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-reg">Registrarse</Button>
+            <Button variant={"primary"} size={"lg"} className={"my-4 add-shadow"} type="submit" form="form-reg">Registrarse</Button>
         </>
     );
 };

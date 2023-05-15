@@ -10,7 +10,6 @@ const Button = ({ children, variant, size, className, ...rest }) => {
     `btn-${size}`,
     className
   );
-  console.log(classes)
   return (
     <button className={classes} {...rest}>
       {children}

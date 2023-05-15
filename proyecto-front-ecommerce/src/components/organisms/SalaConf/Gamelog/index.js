@@ -58,7 +58,7 @@ const Gamelog = () => {
                     {errors.nombre && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
                 </Input>
             </form>
-            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-gamelog">Empezar</Button>
+            <Button variant={"primary"} size={"lg"} className={"my-4 add-shadow"} type="submit" form="form-gamelog">Empezar</Button>
             <PItem variant={"fs-5"} color={"light"} className={"my-2 "}>
                 Quieres crear una sala?  <NavLink to='/login'>Logueate</NavLink>
             </PItem>

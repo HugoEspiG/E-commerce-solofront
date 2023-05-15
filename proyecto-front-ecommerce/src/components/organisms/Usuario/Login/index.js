@@ -6,6 +6,7 @@ import React from "react";
 import Input from "../../../atoms/input";
 import Button from "../../../atoms/button";
 import PItem from "../../../atoms/PItem";
+import data2 from "../../../../Data/Data"
 
 export default function Login() {
 
@@ -31,7 +32,9 @@ export default function Login() {
         //     }
         // }
         // verify();
-        console.log(data);
+        console.log(data2);
+        addUser(data2)
+        navigateFn("/User")
     }
     return (
         <>
@@ -59,7 +62,7 @@ export default function Login() {
                     {errors.password && <small className="text-danger fw-bold">El campo no puede estar vacio</small>}
                 </Input>
             </form>
-            <Button variant={"primary"} size={"lg"} className={"my-4"} type="submit" form="form-log">Empezar</Button>
+            <Button variant={"primary"} size={"lg"} className={"my-4 add-shadow"} type="submit" form="form-log">Empezar</Button>
             <PItem variant={"fs-5"} color={"light"} className={"my-2 "}>
                 No estas logueado?  <NavLink to='/register'>Registrate</NavLink>
             </PItem>

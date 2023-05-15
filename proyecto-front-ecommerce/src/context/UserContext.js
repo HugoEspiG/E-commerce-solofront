@@ -10,7 +10,7 @@ export default function UserCustomContext({ children }) {
     }
 
     return (
-        <UserContext.Provider value={{ userData: data}}>
+        <UserContext.Provider value={{ userData: data,addUser}}>
             {children}
         </UserContext.Provider>
     )
