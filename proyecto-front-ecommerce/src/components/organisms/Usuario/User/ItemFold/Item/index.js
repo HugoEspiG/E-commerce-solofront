@@ -7,7 +7,8 @@ function Item(props) {
     const navigateFn = useNavigate();
 
     const loadTestDetails = () => {
-        navigateFn(`/Home`)
+
+        navigateFn(`/Game/${1234}`)
     }
 
     return (
@@ -16,7 +17,7 @@ function Item(props) {
                 <img src={props.img} className="card-img itemImg" alt="" />
                 <div className="card-img-overlay content">
                     <PItem variant={"fs-5"} color={"light"} className={"my-2 bg-primary"}>{props.nombre}</PItem>
-                    <Button variant={"primary"} size={"md"} className={"my-4 add-shadow"} onClick={loadTestDetails}>ver Test</Button>
+                    <Button variant={"primary"} size={"md"} className={"my-4 add-shadow"} onClick={loadTestDetails}>Test</Button>
                 </div>
             </div>
         </div>

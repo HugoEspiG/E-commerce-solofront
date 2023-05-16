@@ -1,18 +1,17 @@
 import React from 'react';
-import ItemList from '../components/organisms/Usuario/User/ItemFold/ItemList';
 import "../components/organisms/Preseleccion/_preseleccion.scss"
 import PItem from '../components/atoms/PItem';
+import SalaEspera from '../components/organisms/SalaConf/SalaEspera'
 
-
-const Home = () => {
+const Sala = () => {
     return (
         <div>
             <div>
                 <PItem variant={"h1"} color={"light"} className={"pt-2 pb-5"}>Bolicancha</PItem>
-                <ItemList/>
+                <SalaEspera/>
             </div>
         </div>
     );
 };
 
-export default Home;
+export default Sala;

@@ -17,7 +17,7 @@ export default function NavBar() {
                                 <NavLink to={"/"} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
                             </li>
                         </ul>
-                        <div className="nav-item">
+                        <div className="navs-item">
                             <NavLink to={"/"} className="bi bi-person-circle text-white"></NavLink>
                         </div>
                     </div>
