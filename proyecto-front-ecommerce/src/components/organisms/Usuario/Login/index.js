@@ -63,7 +63,7 @@ export default function Login() {
                 </Input>
             </form>
             <Button variant={"primary"} size={"lg"} className={"my-4 add-shadow"} type="submit" form="form-log">Empezar</Button>
-            <PItem variant={"fs-5"} color={"light"} className={"my-2 "}>
+            <PItem variant={"fs-5"} color={"light"} className={"my-2"}>
                 No estas logueado?  <NavLink to='/register'>Registrate</NavLink>
             </PItem>
         </>

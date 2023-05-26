@@ -6,9 +6,8 @@ function Item(props) {
 
     const navigateFn = useNavigate();
 
-    const loadTestDetails = () => {
-
-        navigateFn(`/Game/${1234}`)
+    const loadTest = () => {
+        navigateFn(`/Game/${Math.floor(Math.random() * 999999)}`)
     }
 
     return (
@@ -17,7 +16,7 @@ function Item(props) {
                 <img src={props.img} className="card-img itemImg" alt="" />
                 <div className="card-img-overlay content">
                     <PItem variant={"fs-5"} color={"light"} className={"my-2 bg-primary"}>{props.nombre}</PItem>
-                    <Button variant={"primary"} size={"md"} className={"my-4 add-shadow"} onClick={loadTestDetails}>Test</Button>
+                    <Button variant={"primary"} size={"md"} className={"my-4 add-shadow"} onClick={loadTest}>Test</Button>
                 </div>
             </div>
         </div>
