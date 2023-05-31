@@ -1,10 +1,11 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useContext} from 'react';
 import PItem from '../../../atoms/PItem';
 import { useParams } from "react-router-dom";
+import { UserContext } from '../../../../context/UserContext';
 
-const SalaEspera = (props) => {
+const SalaEspera = () => {
 
-    
+    const {sala} = useContext(UserContext)
     const{id} = useParams();
     const[Nsala,setNsala]=useState(0);
 
@@ -14,7 +15,7 @@ const SalaEspera = (props) => {
         //     setNsala(resp)
         // }
         // loadUserInfo();
-        setNsala(1234)
+        setNsala(sala)
     },[id])
 
 
@@ -26,7 +27,7 @@ const SalaEspera = (props) => {
                 ):(
                     <>
                     <PItem variant={"fs-1"} color={"light"} className={"my-2 "}>Numero de sala:</PItem>
-                    <PItem variant={"fs-1"} color={"light"} className={"my-2 bg-primary"}>{Nsala}</PItem>
+                    <PItem variant={"fs-1"} color={"light"} className={"my-8 bg-primary"}>{Nsala}</PItem>
                     </>
                 )
 

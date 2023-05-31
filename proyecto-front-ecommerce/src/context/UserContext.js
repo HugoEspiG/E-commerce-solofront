@@ -4,10 +4,14 @@ export const UserContext = React.createContext([]);
 
 export default function UserCustomContext({ children }) {
     const [data, setData] = useState({})
-
+    const [sala, setSala] = useState({})
 
     const addUser = (info) => {
         setData(info)
+    }
+
+    const createSale = (Nsala) =>{
+        setSala(Nsala)
     }
 
     const addQuest = (questions) => {
@@ -21,7 +25,7 @@ export default function UserCustomContext({ children }) {
         setData(newData);
     };
     return (
-        <UserContext.Provider value={{ userData: data, addUser , addQuest}}>
+        <UserContext.Provider value={{ userData: data, sala, createSale, addUser , addQuest}}>
             {children}
         </UserContext.Provider>
     )

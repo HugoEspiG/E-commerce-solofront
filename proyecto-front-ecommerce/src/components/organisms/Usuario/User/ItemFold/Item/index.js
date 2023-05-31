@@ -1,13 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../../../../atoms/button";
 import PItem from "../../../../../atoms/PItem";
+import { useContext } from "react";
+import { UserContext } from "../../../../../../context/UserContext";
 
 function Item(props) {
 
     const navigateFn = useNavigate();
+    const { createSale } = useContext(UserContext)
 
     const loadTest = () => {
-        navigateFn(`/Game/${Math.floor(Math.random() * 999999)}`)
+        const Nsala = Math.floor(Math.random() * 999999)
+        createSale(Nsala)
+        navigateFn(`/Game/${Nsala}`)
     }
 
     return (
