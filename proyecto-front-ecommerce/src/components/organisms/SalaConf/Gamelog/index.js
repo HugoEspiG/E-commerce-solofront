@@ -6,11 +6,12 @@ import { useContext } from "react";
 import Input from '../../../atoms/input';
 import Button from '../../../atoms/button';
 import PItem from '../../../atoms/PItem';
+import { UserContext } from '../../../../context/UserContext';
 
 const Gamelog = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const navigateFn = useNavigate();
-
+    const {addUser} = useContext(UserContext);
 
     const customSubmit = (data) => {
         // async function verify() {
@@ -30,7 +31,8 @@ const Gamelog = () => {
         //     }
         // }
         // verify();
-        console.log(data);
+        addUser(data)
+        navigateFn(`/Game/${data.Nsala}`)
     }
     return (
         <>

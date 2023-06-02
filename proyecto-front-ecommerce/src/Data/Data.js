@@ -4,6 +4,7 @@ const Data =
     apellido: 'Espinosa',
     email: 'hugo@email.com',
     password: '1234',
+    esAdmin: true,
     tests: [
         {
             id: 1,

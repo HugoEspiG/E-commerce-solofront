@@ -1,0 +1,24 @@
+.itemImg{
+    @include image-style(150px, 150px, 5px, black);
+    object-fit: fill;
+    background-size: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0,0, .4);
+    opacity: 0;
+    transition: .5s;
+}
+.card:hover .content{
+    opacity: 1;
+}
+
+.ItemListOrder{
+ padding: 3%;
+}
